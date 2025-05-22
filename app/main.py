@@ -1,6 +1,6 @@
 class Animal:
 
-    alive = []
+    alive: list["Animal"] = []
 
     def __init__(
         self,
@@ -8,9 +8,9 @@ class Animal:
         health: int = 100,
         hidden: bool = False
     ) -> None:
-        self.name = name
-        self.health = health
-        self.hidden = hidden
+        self.name: str = name
+        self.health: int = health
+        self.hidden: bool = hidden
         Animal.alive.append(self)
 
     def __repr__(self) -> str:
